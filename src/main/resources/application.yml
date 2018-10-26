@@ -1,0 +1,19 @@
+spring:
+  mvc:
+    view:
+      #jsp 支持
+      suffix: .jsp
+      prefix: /WEB-INF/jsp/
+
+  #关闭默认模板引擎
+  thymeleaf:
+    cache: false
+    enabled: false
+
+server:
+  #  context-parameters:
+  #    development: true
+  jsp-servlet:
+    init-parameters:
+      development: true # 关闭热加载模式，Spring boot 1.5.9默认为false，开发环境可以设置为true, 生产环境必须设置为false
+  port: 8080
